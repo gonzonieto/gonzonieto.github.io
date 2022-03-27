@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <title>TinyApp</title>
+</head>
+<body>
+  <main>
+    <header class="mb-5" style="box-shadow: 0 1rem 0.9rem grey">
+  <nav class="navbar navbar-expand-md navbar-dark bg-success">
+    <a class="navbar-brand" href="/urls">TinyApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse form-inline navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/urls">My URLs</a>
+        <a class="nav-item nav-link" href="/urls/new">Create a New Short Link</a>
+      </div>
+      <!-- if user is logged in, show their email and hide login form -->
+      
+      <div>
+        <a class="btn btn-outline-light btn-sm mr-2" href="/login" role="button">Log in</a>
+        <a class="btn btn-outline-light btn-sm" href="/register" role="button">Sign up</a>
+      </div> 
+      
+    </div>
+  </nav>
+</header>
+    <div class="card">
+      <div class="card-header">
+        <legend class="display-4 my-2 text-center">Log in to your account</legend>
+      </div>
+      <div class="card-body">
+        <div class="row justify-content-center my-3">
+          <form action="/login" method="POST">
+            <fieldset class="">
+              <div class="form-inline row justify-content-end">
+                <label for="email">Email: </label>
+                <div name="emailBlock">
+                  <input class="form-control mb-0" type="email" name="email" placeholder="email@domain.com" style="width: 300px; margin: 1em">
+                <small id="emailHelpBlock" class="form-text text-muted" style="margin-left: 1.75rem">
+                  Must enter a valid email address.
+                </small>
+                </div>
+              </div>
+              <div class="form-inline row justify-content-end">
+                <label for="passwordBlock">Password: </label>
+                <div name="passwordBlock">
+                  <input class="form-control mb-0" type="password" name="password" placeholder="********" style="width: 300px; margin: 1em">
+                  <small id="passwordHelpBlock" class="form-text text-muted" style="margin-left: 1.75rem">
+                    Your password must be 8-20 characters long.
+                  </small>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <button type="submit" class="btn btn-primary" style="margin: 1em">Submit</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+    
+  </main>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
